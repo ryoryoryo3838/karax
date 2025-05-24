@@ -1,7 +1,9 @@
 include karax / prelude
-
+import markdown
+let html = markdown("# Hello, Nim!!!")
 proc createDom(): VNode =
   result = buildHtml(tdiv):
-    text "Hello World!"
+    echo(html)
+    
 
 setRenderer createDom
